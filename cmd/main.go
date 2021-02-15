@@ -56,9 +56,9 @@ func Persist(journal *model.Journal) {
 
 	dirname := filepath.Dir(fname)
 	// check dir exist
-	if _ , err := os.Stat(dirname);err != nil{
+	if _, err := os.Stat(dirname); err != nil {
 		err := os.MkdirAll(dirname, 0777)
-		if err != nil{
+		if err != nil {
 			panic(err)
 		}
 	}
